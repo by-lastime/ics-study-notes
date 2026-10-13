@@ -1,0 +1,7 @@
+node_modules/
+.build/
+.DS_Store
+__pycache__/
+site/build-diagnostics.json
+site/build-version.json
+site/source-map.json

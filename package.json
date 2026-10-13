@@ -1,0 +1,20 @@
+{
+  "name": "ics-study-notes",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "持续更新的课程复习笔记与 HTML 阅读器",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "start": "python3 -m http.server 8765 --bind 127.0.0.1 --directory site",
+    "pdf": "node site/scripts/export-pdf.mjs"
+  },
+  "dependencies": {
+    "highlight.js": "11.11.1",
+    "katex": "0.16.22",
+    "marked": "16.3.0"
+  },
+  "devDependencies": {
+    "playwright": "1.58.2"
+  }
+}

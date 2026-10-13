@@ -1,0 +1,133 @@
+@page { size: A4; margin: 14mm 14mm 17mm; }
+:root { --bg:#fff; --surface:#fff; --text:#111; --muted:#494949; --border:#c8c8c8; --accent:#223b55; font-size:14px; color-scheme:light; }
+* { box-sizing:border-box; }
+body { width:182mm; margin:0 auto; color:#111; background:#fff; font-family:"PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif; font-size:10.5pt; line-height:1.55; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+article { margin:0; padding:0; }
+h1 { font-size:20pt; line-height:1.35; margin:0 0 9pt; font-weight:650; letter-spacing:-.25pt; }
+h2 { font-size:13pt; line-height:1.45; margin:15pt 0 6pt; padding-bottom:3pt; border-bottom:.6pt solid #999; font-weight:650; break-after:avoid; }
+h3 { font-size:11.2pt; line-height:1.45; margin:11pt 0 5pt; font-weight:650; break-after:avoid; }
+h4 { font-size:10.5pt; margin:7pt 0 4pt; break-after:avoid; }
+p { margin:0 0 5.5pt; orphans:3; widows:3; }
+ul,ol { margin:4pt 0 7pt; padding-left:1.65em; }
+li { margin:2.5pt 0; orphans:2; widows:2; }
+li>p { margin-bottom:3pt; }
+strong { font-weight:650; }
+a { color:#263e52; text-decoration:none; overflow-wrap:anywhere; }
+hr { border:0; border-top:.5pt solid #bbb; margin:9pt 0; }
+blockquote { margin:7pt 0; border-left:2pt solid #aaa; padding-left:9pt; }
+:not(pre)>code { font-family:"SFMono-Regular","Menlo",Consolas,monospace; font-size:9.2pt; padding:0 1pt; overflow-wrap:anywhere; }
+pre { margin:6pt 0 8pt; padding:7pt 9pt; border:.55pt solid #d0d0d0; border-radius:3pt; background:#f7f7f7; font-size:8.5pt; line-height:1.42; break-inside:avoid; white-space:pre-wrap; overflow:visible; overflow-wrap:anywhere; }
+pre code { font-family:"SFMono-Regular","Menlo",Consolas,monospace; font-size:inherit; line-height:inherit; background:none!important; padding:0!important; }
+.hljs { background:transparent; color:#111; }
+.hljs-comment { color:#505050; }
+.hljs-keyword,.hljs-built_in { color:#3e2758; }
+.hljs-number,.hljs-literal { color:#254869; }
+.hljs-string { color:#28583a; }
+table { width:100%; border-collapse:collapse; font-size:9.1pt; line-height:1.5; margin:7pt 0 9pt; table-layout:auto; }
+thead { display:table-header-group; }
+tr { break-inside:avoid; }
+th,td { padding:4.2pt 5.5pt; border:.5pt solid #c5c5c5; vertical-align:top; text-align:left; overflow-wrap:anywhere; }
+th { font-weight:650; background:#f2f2f2; }
+td code,th code { font-size:8.2pt; }
+.table-scroll { overflow:visible!important; margin:0; }
+.katex { font-size:1.03em; }
+.katex-display { margin:5pt 0 7pt; overflow:visible; break-inside:avoid; }
+.katex-display>.katex { white-space:normal; }
+.katex svg { stroke:none; }
+.print-meta { font-size:8pt; color:#555; border-bottom:.6pt solid #aaa; padding-bottom:6pt; margin:0 0 10pt; }
+.print-toc { columns:2; column-gap:8mm; font-size:8.5pt; margin:6pt 0 10pt; padding:6pt 8pt; border:.5pt solid #ccc; background:#fafafa; }
+.print-toc div { margin:1.5pt 0; break-inside:avoid; }
+.print-source-note { font-size:8.7pt; color:#444; }
+.print-figure-label { margin:7pt 0 3pt; font-size:9.5pt; font-weight:600; break-after:avoid; }
+.print-book-section { break-before:page; }
+.print-book-section:first-child { break-before:auto; }
+.print-note { font-size:9pt; padding:5pt 7pt; border-left:2pt solid #929292; margin:6pt 0; background:#f6f6f6; }
+figure { margin:8pt 0 9pt!important; padding:9pt!important; max-width:100%; width:100%; border:.55pt solid #bbb!important; border-radius:3pt!important; break-inside:avoid; overflow:visible!important; background:#fcfcfc!important; }
+figure svg { width:100%!important; min-width:0!important; max-width:100%!important; height:auto!important; display:block; stroke:none; }
+figure p,figure figcaption { font-size:9pt!important; line-height:1.5!important; }
+figure :is(.d12-heading,.d345-title) { font-size:10.5pt!important; margin:0 0 6pt!important; }
+.d12-scroll,.d345-scroll { overflow:visible!important; padding:0!important; max-width:100%; }
+.d12-bitops,.d12-weights,.d12-register-map { min-width:0!important; }
+.d12-row-label,.d12-row-note,.d12-description,.d12-caption,.d345-caption { font-size:8.4pt!important; color:#404040; }
+.d12-caption { margin-top:6pt!important; padding-top:5pt!important; }
+.d12-memory-flow { grid-template-columns:1fr 55px 1.1fr; gap:8px; }
+.d12-panel { padding:9px; border-radius:4px; }
+.d12-register { padding:6px 0; font-size:12px; }
+.d12-eyebrow { margin-bottom:7px; font-size:11px; }
+.d12-memory-row { padding:3px 0; font-size:11px; }
+.d12-memory-row strong { font-size:14px; }
+.d12-result { margin-top:8px; padding:7px 10px; border-radius:4px; }
+.d12-instruction { margin-top:8px; }
+.d12-bit-row { grid-template-columns:52px 1fr 136px; gap:8px; padding:3px 0; }
+.d12-bit { min-height:28px; font-size:14px; }
+.d12-weight-row { grid-template-columns:106px 1fr; gap:8px; padding:4px 0; }
+.d12-eight { font-size:12px; gap:4px; }
+.d12-toggle-bit { min-height:30px; font-size:15px; padding:2px; border-radius:4px; }
+.d12-dual-results { margin:8px 0 6px; gap:9px; }
+.d12-dual-results>div { padding:7px 10px; border-radius:4px; }
+.d12-dual-results output { font-size:20px; }
+.d12-equation { padding:4px 0; font-size:12px; }
+.d12-register-track { height:28px; border-radius:3px; }
+.d12-bytes { gap:5px; }
+.d12-byte { padding:6px 3px; border-radius:4px; gap:3px; }
+.d12-byte strong { font-size:18px; }
+.d12-value-label { margin-bottom:9px; }
+.d12-endian-group+.d12-endian-group { margin-top:10px; }
+.d12-field { min-height:54px; padding:5px; border-radius:4px; }
+.d12-field strong { font-size:17px; }
+.d12-field span { font-size:11px; }
+.d12-stepper-stage { min-height:0!important; }
+.d12-step-title { margin:0 0 6px; }
+.d12-formula-pair { gap:9px; }
+.d12-formula-pair>div { padding:8px 10px; border-radius:4px; }
+.d12-formula-pair strong { font-size:15px; margin:6px 0 2px; }
+.d12-formula-pair p { margin:4px 0 0; }
+.d12-formula-result { padding:6px 0 0; font-size:16px; }
+.d12-condition { font-size:12px; margin:5px 0; }
+.d12-special-row { margin-top:6px; font-size:11px; }
+.d12-direction { font-size:10px; }
+.d12-rule-list { margin-top:6px; }
+.d12-rule-list>div { padding:4px 0; font-size:11px; }
+.d12-numberline { min-width:0!important; }
+.d345-reason { border:0; padding:3pt 0; margin:3pt 0; background:none; }
+.d345-text { fill:#161616; }
+.d345-small,.d345-tiny { fill:#3b3b3b; }
+.d345-figure .diagram-step[hidden] { display:block!important; }
+.d345-scroll-hint,.d12-step-controls,.d345-controls,.d12-control-row,button[data-reset-bits] { display:none!important; }
+.print-call-columns { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }
+.print-call-frame { min-width:0; padding:7px; border:.6pt solid #bbb; background:#fff; }
+.print-call-frame h4 { font-size:9pt; margin:0 0 7px; }
+.print-slot { display:flex; flex-direction:column; gap:2px; padding:6px; border:.5pt solid #ccc; margin-bottom:5px; min-height:48px; font-size:9pt; }
+.print-slot code { color:#444; font-size:8pt; }
+.print-slot.active { border:1.2pt solid #222; background:#eef1f3; }
+.print-call-frame p { font-size:8pt!important; }
+.print-machine-state { font-family:Menlo,monospace; font-size:8pt; padding:4px 0; }
+.print-rop-memory { display:grid; grid-template-columns:90px 110px 1fr; font-size:9pt; margin:5pt 0; }
+.print-rop-memory>div { padding:4pt 6pt; border-bottom:.5pt solid #ccc; }
+.print-step-table { font-size:8.4pt; }
+.print-step-table th,.print-step-table td { padding:3.5pt 4pt; }
+.print-step-table code { font-size:8pt; white-space:nowrap; }
+.print-small-reasons { margin:4pt 0 0; padding-left:1.5em; font-size:8.5pt; }
+.print-small-reasons li { margin:2pt 0; }
+.print-float-step { break-inside:avoid; }
+@media print { body{width:auto;margin:0;} .print-book-section{break-before:page;} }
+/* Keep print preflight at the same usable width as the A4 page. */
+@media print { body { width:182mm; } }
+/* These two sections otherwise strand their closing paragraph on a new sheet. */
+article[data-doc="d5"], article[data-doc="a3"] { line-height:1.48; }
+article[data-doc="d5"] p, article[data-doc="a3"] p { margin-bottom:4.5pt; }
+article[data-doc="d5"] h2, article[data-doc="a3"] h2 { margin-top:12pt; }
+article[data-doc="d5"] figure svg { max-width:155mm!important; margin:0 auto; }
+/* Keep adjacent fractions visibly separate on the printed number line. */
+.d12-svg-tick { font-size:13px!important; }
+
+.print-exercise { break-inside:avoid; }
+.print-exercise-long { break-inside:auto; }
+
+/* Three-column reference: keep command names separate from explanations. */
+article[data-doc="command-reference"] table, .command-reference table { table-layout:fixed; }
+article[data-doc="command-reference"] th:first-child, .command-reference th:first-child { width:26%; }
+article[data-doc="command-reference"] th:nth-child(2), .command-reference th:nth-child(2) { width:31%; }
+article[data-doc="command-reference"] td:first-child, .command-reference td:first-child { font-family:"Menlo","PingFang SC",monospace; font-size:8.3pt; }
+article[data-doc="d6"] > .table-scroll { break-inside:avoid; }
+article[data-doc="d6"] .print-toc { columns:2; }

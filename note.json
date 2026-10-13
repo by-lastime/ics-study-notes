@@ -1,0 +1,110 @@
+{
+  "id": "ics",
+  "title": "ICS 计算机系统复习笔记",
+  "description": "围绕整数、浮点、汇编、控制流、过程调用、数据布局与内存安全整理的复习讲义，包含例题、独立练习、答案、图解和补充问答。",
+  "scope": "当前覆盖课程前 8 讲：五讲基础复习，加第六讲测后重点补强；尚未覆盖整门课程。复习讲次与原课程讲次不同。",
+  "status": "持续更新中",
+  "updatedAt": "2026-10-12",
+  "releaseDate": "2026-10-13",
+  "repositoryUrl": "https://github.com/by-lastime/ics-study-notes",
+  "readerUrl": "https://by-lastime.github.io/ics-study-notes/",
+  "chapters": [
+    {
+      "id": "overview",
+      "title": "阅读指南",
+      "url": "https://by-lastime.github.io/ics-study-notes/#doc=overview"
+    },
+    {
+      "id": "d1",
+      "title": "第1讲：整数与汇编入门",
+      "url": "https://by-lastime.github.io/ics-study-notes/#doc=d1"
+    },
+    {
+      "id": "d2",
+      "title": "第2讲：浮点与条件分支",
+      "url": "https://by-lastime.github.io/ics-study-notes/#doc=d2"
+    },
+    {
+      "id": "d3",
+      "title": "第3讲：循环与过程调用",
+      "url": "https://by-lastime.github.io/ics-study-notes/#doc=d3"
+    },
+    {
+      "id": "d4",
+      "title": "第4讲：数据布局与内存安全",
+      "url": "https://by-lastime.github.io/ics-study-notes/#doc=d4"
+    },
+    {
+      "id": "d5",
+      "title": "第5讲：完整测验与考前整理",
+      "url": "https://by-lastime.github.io/ics-study-notes/#doc=d5"
+    },
+    {
+      "id": "d6",
+      "title": "第6讲：测后重点补强",
+      "url": "https://by-lastime.github.io/ics-study-notes/#doc=d6"
+    },
+    {
+      "id": "command-reference",
+      "title": "汇编命令三栏速查表",
+      "url": "https://by-lastime.github.io/ics-study-notes/#doc=command-reference"
+    },
+    {
+      "id": "past-bank",
+      "title": "往年题精选 · 44题",
+      "url": "https://by-lastime.github.io/ics-study-notes/#doc=past-bank"
+    },
+    {
+      "id": "past-bank-guide",
+      "title": "往年题筛选说明",
+      "url": "https://by-lastime.github.io/ics-study-notes/#doc=past-bank-guide"
+    },
+    {
+      "id": "plan",
+      "title": "五天复习计划",
+      "url": "https://by-lastime.github.io/ics-study-notes/#doc=plan"
+    },
+    {
+      "id": "supplements",
+      "title": "补充问答目录 · Q001–Q034",
+      "url": "https://by-lastime.github.io/ics-study-notes/#doc=supplements"
+    }
+  ],
+  "answers": [
+    {
+      "id": "a1",
+      "title": "第1讲练习答案",
+      "url": "https://by-lastime.github.io/ics-study-notes/#doc=a1"
+    },
+    {
+      "id": "a2",
+      "title": "第2讲练习答案",
+      "url": "https://by-lastime.github.io/ics-study-notes/#doc=a2"
+    },
+    {
+      "id": "a3",
+      "title": "第3讲练习答案",
+      "url": "https://by-lastime.github.io/ics-study-notes/#doc=a3"
+    },
+    {
+      "id": "a4",
+      "title": "第4讲练习答案",
+      "url": "https://by-lastime.github.io/ics-study-notes/#doc=a4"
+    },
+    {
+      "id": "repair-answers",
+      "title": "第5讲纠错题答案",
+      "url": "https://by-lastime.github.io/ics-study-notes/#doc=repair-answers"
+    },
+    {
+      "id": "mock-answers",
+      "title": "2025保留卷完整解析",
+      "url": "https://by-lastime.github.io/ics-study-notes/#doc=mock-answers"
+    },
+    {
+      "id": "past-bank-answers",
+      "title": "往年精选题解析",
+      "url": "https://by-lastime.github.io/ics-study-notes/#doc=past-bank-answers"
+    }
+  ]
+}
