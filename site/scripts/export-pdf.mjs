@@ -24,7 +24,9 @@ const baseConfigs=[...Object.keys(names).map(id=>({ids:[id],name:names[id],title
 names['past-bank']='往年题精选-题目册.pdf';
 names['past-bank-answers']='往年题精选-独立解析.pdf';
 const bankConfigs=[{ids:['past-bank'],name:names['past-bank'],title:'ICS前8讲·往年题精选·题目册'},{ids:['past-bank-answers'],name:names['past-bank-answers'],title:'ICS前8讲·往年题精选·独立解析'}];
-const configs=onlyRepair?baseConfigs.filter(c=>['d6','command-reference'].includes(c.ids[0])):onlyBank?bankConfigs:[...baseConfigs,...bankConfigs];
+const onlyDoc=process.argv.find(a=>a.startsWith('--doc='))?.slice(6);
+let configs=onlyRepair?baseConfigs.filter(c=>['d6','command-reference'].includes(c.ids[0])):onlyBank?bankConfigs:[...baseConfigs,...bankConfigs];
+if(onlyDoc)configs=configs.filter(c=>c.ids[0]===onlyDoc);
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const styles=['vendor/katex/katex.min.css','vendor/highlight.css','diagrams/d1d2.css','diagrams/d3d4d5.css','print-dense.css'];
 const browserCache=path.join(process.env.HOME,'Library/Caches/ms-playwright');
@@ -84,7 +86,7 @@ try {
    document.querySelectorAll('[hidden]').forEach(el=>el.removeAttribute('hidden'));
    for(const a of document.querySelectorAll('a')) {
     if(a.dataset.sourceId&&sourceMap[a.dataset.sourceId])a.href='file://'+encodeURI(sourceMap[a.dataset.sourceId].path);
-    else if(a.getAttribute('href')?.startsWith('#doc=')){const id=new URLSearchParams(a.getAttribute('href').slice(1)).get('doc');const name=names[id]||(id==='mock-answers'?'2025保留卷解析-完成测验后阅读.pdf':/^(a[1-4]|repair-answers)$/.test(id)?'独立练习答案册.pdf':null);if(name)a.href='https://by-lastime.github.io/ics-study-notes/downloads/'+encodeURIComponent(name);}
+    else if(a.getAttribute('href')?.startsWith('#doc=')){const params=new URLSearchParams(a.getAttribute('href').slice(1));const id=params.get('doc');const name=names[id]||(id==='mock-answers'?'2025保留卷解析-完成测验后阅读.pdf':/^(a[1-4]|repair-answers)$/.test(id)?'独立练习答案册.pdf':null);if(params.get('section'))a.href='https://by-lastime.github.io/ics-study-notes/'+a.getAttribute('href');else if(name)a.href='https://by-lastime.github.io/ics-study-notes/downloads/'+encodeURIComponent(name);}
    }
    document.querySelectorAll('.d12-numberline .d12-svg-tick').forEach(label=>{if(label.textContent==='15/32')label.setAttribute('x','579');if(label.textContent==='16/32')label.setAttribute('x','625');});
    document.querySelectorAll('article[data-doc="past-bank"] > h3').forEach(h=>{const wrapper=document.createElement('section');wrapper.className='print-exercise';h.before(wrapper);let node=h;while(node&&!/^H[23]$/.test(node===h?'':node.tagName)){const next=node.nextElementSibling;wrapper.append(node);node=next;}if(wrapper.getBoundingClientRect().height>940)wrapper.classList.add('print-exercise-long');});

@@ -135,7 +135,9 @@ function mathExtensions(context) {
 }
 function rewriteLink(href, doc) {
   if (/^(?:https?:|mailto:|tel:|data:)/i.test(href)) return { href };
-  if (href.startsWith('#')) return { href };
+  if (href.startsWith('#doc=')) return { href };
+  if (href.startsWith('#') && href.length > 1) return { href: `#doc=${doc.id}&section=${encodeURIComponent(href.slice(1))}`, docId: doc.id };
+  if (href === '#') return { href };
   if (/^[a-z][a-z\d+.-]*:/i.test(href) && !href.startsWith('file:')) return { href: '#' };
   let decoded;
   try { decoded = decodeURI(href.replace(/^file:\/\//, '')); } catch { decoded = href; }
